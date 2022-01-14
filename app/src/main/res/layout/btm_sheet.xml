@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.MaterialComponents.BottomSheet.Modal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/open_cam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="48dp"
+        android:gravity="center"
+        android:text="@string/open_camera"
+        app:drawableTopCompat="@drawable/ic_cam" />
+
+    <TextView
+        android:id="@+id/open_gal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="48dp"
+        android:gravity="center"
+        android:text="@string/open_gallery"
+        app:drawableTopCompat="@drawable/ic_menu_gallery" />
+</LinearLayout>

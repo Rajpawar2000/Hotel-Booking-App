@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui_fragments.ProfileFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/your"
+        android:fontFamily="@font/proxima_asi_regular"
+        android:gravity="start"
+        android:paddingStart="64dp"
+        android:text="@string/customize"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/your"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/profile_text"
+        android:fontFamily="@font/proxima_asi_regular"
+        android:gravity="center"
+        android:text="@string/your"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="48sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/all_profile"
+        android:layout_marginBottom="128dp"
+        android:fontFamily="@font/proxima_asi_regular"
+        android:gravity="end"
+        android:paddingEnd="50dp"
+        android:text="@string/profile"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/all_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="64dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="4dp">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="50"
+            android:visibility="invisible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profile_img"
+                    android:layout_width="115dp"
+                    android:layout_height="128dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundShapeOverlay"
+                    app:srcCompat="@drawable/ic_launcher_cut" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="50dp"
+                    android:src="@drawable/ic_cam"
+                    app:layout_anchor="@id/profile_img"
+                    app:layout_anchorGravity="end|bottom" />
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="-18sp"
+                android:fontFamily="@font/proxima_asi_regular"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/app_name"
+                android:textSize="18sp"
+                app:drawableEndCompat="@drawable/ic_edit"
+                app:layout_constraintTop_toBottomOf="@+id/container"
+                tools:layout_editor_absoluteX="0dp" />
+
+
+            <TextView
+                android:id="@+id/phone_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="-12sp"
+                android:fontFamily="@font/proxima_asi_regular"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/phone_91000000000"
+                app:drawableEndCompat="@drawable/ic_edit"
+                app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

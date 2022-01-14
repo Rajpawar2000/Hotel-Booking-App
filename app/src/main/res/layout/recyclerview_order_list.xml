@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="4dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/order_hotel_room_images"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/order_hotel_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/proxima_asi_regular"
+            android:padding="6dp"
+            android:text="@string/udaan_dekeling_resort"
+            android:textSize="22sp"
+            app:drawableStartCompat="@drawable/ic_address" />
+
+        <TextView
+            android:id="@+id/order_hotel_room_adult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/proxima_asi_light"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text="@string/_2_adult_beds"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_room_adult" />
+
+        <TextView
+            android:id="@+id/order_hotel_room_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/proxima_asi_light"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text="@string/_2_child_beds"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_room_child" />
+
+        <TextView
+            android:id="@+id/order_hotel_check_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/proxima_asi_light"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text="@string/check_in_01_01_1001"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_check_in" />
+
+        <TextView
+            android:id="@+id/order_hotel_check_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/proxima_asi_light"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text="@string/check_out_01_01_1001"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_log_out" />
+
+        <TextView
+            android:id="@+id/order_hotel_room_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/proxima_asi_light"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text="@string/inr_2205"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_price" />
+
+        <TextView
+            android:id="@+id/order_hotel_room_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/proxima_asi_light"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text="@string/current_status_staying_in"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_status" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/order_cancel_hotel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/request_cancellation" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</com.google.android.material.card.MaterialCardView>

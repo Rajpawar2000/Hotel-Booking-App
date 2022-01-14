@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/textView_check_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/proxima_asi_light"
+        android:text="@string/check_in"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/proxima_asi_light"
+        android:text="@string/check_out"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_check_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".85"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/check_out_date"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:clickable="false"
+        android:fontFamily="@font/proxima_asi_light"
+        android:text="@string/_9th_july"
+        android:gravity="center"
+        android:textColor="?colorSecondary"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:rippleColor="#33AAAAAA"
+        app:strokeColor="?colorSecondary"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/check_in_date"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:clickable="false"
+        android:gravity="center"
+        android:fontFamily="@font/proxima_asi_light"
+        android:text="@string/_9th_july"
+        android:textColor="?colorSecondary"
+        app:cornerRadius="4dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/check_out_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#33AAAAAA"
+        app:strokeColor="?colorSecondary"
+        app:strokeWidth="2dp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_in_date">
+
+        <TextView
+            android:id="@+id/hotel_room_adult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/proxima_asi_light"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text="@string/adult_beds_needed"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_room_adult" />
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/adult_beds_need"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            app:backGroundColor="?colorSecondary"
+            app:finalNumber="2"
+            app:initialNumber="1" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/abc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat3">
+
+        <TextView
+            android:id="@+id/hotel_room_child"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/proxima_asi_light"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text="@string/child_bed_needed"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_room_child" />
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/child_beds_need"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            app:backGroundColor="?colorSecondary"
+            app:finalNumber="2"
+            app:initialNumber="1" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/hotel_room_price_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:drawablePadding="4dp"
+        android:fontFamily="@font/proxima_asi_light"
+        android:gravity="center_vertical"
+        android:padding="6dp"
+        android:text="@string/inr_xxxx_in_total_for_xxx_days"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_price"
+        app:layout_constraintTop_toBottomOf="@+id/abc" />
+
+    <TextView
+        android:id="@+id/pay_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/proxima_asi_light"
+        android:gravity="center"
+        android:text="@string/payment_is_done_at_reception"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/hotel_room_price_total" />
+
+    <com.ncorti.slidetoact.SlideToActView
+        android:id="@+id/book_hotel_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:inner_color="?colorControlNormal"
+        app:layout_constraintTop_toBottomOf="@id/pay_text"
+        app:text="Book Hotel Now!" />
+</androidx.constraintlayout.widget.ConstraintLayout>
